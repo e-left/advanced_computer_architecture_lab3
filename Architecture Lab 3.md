@@ -184,7 +184,7 @@ So we assume that Xeon runs x10 faster than Arm a9, that means that if the execu
 
 In T time the total energy of Xeon would be
 
-1. \*T \* Runtime Dynamic (= 72.9199 W)  +  T\* Total Leakage  (= 36.8319 W) = 44.12389\*T  Joule
+T \* Runtime Dynamic (= 72.9199 W)  +  T\* Total Leakage  (= 36.8319 W) = 44.12389\*T  Joule
 
 In T time the total energy of Arm would be
 
