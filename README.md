@@ -210,6 +210,28 @@ So Xeon will never be more energy efficient than ARM.
 
 ### Question 2
 
+So our run tests are these:
+
+|Run #|L1 dcache size|L1 icache size|L2 cache size|L1 icache associat.|L1 dcache associat.|L2 cache associat.|Cache line size|
+| :- | :- | :- | :- | :- | :- | :- | :- |
+|1|64|64|1|1|1|2|128|
+|2|64|128|2|1|1|2|32|
+|3|128|64|2|1|1|2|32|
+|4|128|128|4|1|1|2|128|
+|5|128|128|4|2|1|2|128|
+|6|128|128|4|4|1|2|128|
+|7|128|128|4|4|2|2|128|
+|8|128|128|4|4|4|2|64|
+|9|128|128|4|4|4|4|64|
+|10|128|128|4|4|4|8|128|
+
+
+
+
+
+
+
+
 #### Subquestion 1
 The total product we wish to calculate is the EDAP (Energy-Delay-Area-Product) and to do it for a configuration we can use the following type:
 
