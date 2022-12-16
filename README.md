@@ -210,13 +210,35 @@ So Xeon will never be more energy efficient than ARM.
 
 ### Question 2
 
+So our run tests are these:
+
+|Run #|L1 dcache size|L1 icache size|L2 cache size|L1 icache associat.|L1 dcache associat.|L2 cache associat.|Cache line size|
+| :- | :- | :- | :- | :- | :- | :- | :- |
+|1|64|64|1|1|1|2|128|
+|2|64|128|2|1|1|2|32|
+|3|128|64|2|1|1|2|32|
+|4|128|128|4|1|1|2|128|
+|5|128|128|4|2|1|2|128|
+|6|128|128|4|4|1|2|128|
+|7|128|128|4|4|2|2|128|
+|8|128|128|4|4|4|2|64|
+|9|128|128|4|4|4|4|64|
+|10|128|128|4|4|4|8|128|
+
+
+
+
+
+
+
+
 #### Subquestion 1
 The total product we wish to calculate is the EDAP (Energy-Delay-Area-Product) and to do it for a configuration we can use the following type:
 
 `EDAP = Energy * Delay * Area`
 
 where:
-- `Energy` is the total energy for that configuration, equal to Core:Subthreshold Leakage + Core:Gate Leakage Core:Runtime Dynamic + L2:Subthreshold Leakage + L2:Gate Leakage L2:Runtime Dynamic
+- `Energy` is the total energy for that configuration, equal to (Core:Subthreshold Leakage + Core:Gate Leakage Core:Runtime Dynamic + L2:Subthreshold Leakage + L2:Gate Leakage L2:Runtime Dynamic) *time
 - `Area` is the total area, equal to Core:Area and L2:Area
 - `Delay` is the program execution time, obtained from the `gem5` runs (`stats.txt`, `sim_seconds`)
 
@@ -372,3 +394,20 @@ Reminder that these runs and their respective specs can be found on the report f
 As always, with software simulations there is a degree of error because it is not possible to simulate the system in question 100% accurately. Furthermore, the systems in which this research is conducted are not optimized for simulations. Plus, we use two different programs to conduct our research, which have not been developed with the intention of being used together, thus having possible differences in their code and the way they handle things/results. 
 
 An example of something that cannot be simulated properly is the effect of the generated heat from a CPU, how it can cause thermal throttling depending on the cooling/temperature system configuration or speed up the actions performed by the integrated circuit.
+
+#### Our opinion 
+
+The only difficult part was to re-run part2 because some tests of the part 2 were executed on mac which uses different names on results. In general we think it was an easy part of project.
+
+#### Bibliography
+
+https://www.gatevidyalay.com/cache-line-cache-line-size-cache-memory/
+
+http://ece-research.unm.edu/jimp/611/slides/chap5_4.html
+
+Computer Architecture John L. Hennesy and A. Patterson, 4th edition
+
+Digital Intergrated Circuits, 2nd edition
+
+
+
