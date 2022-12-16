@@ -373,6 +373,10 @@ As always, with software simulations there is a degree of error because it is no
 
 An example of something that cannot be simulated properly is the effect of the generated heat from a CPU, how it can cause thermal throttling depending on the cooling/temperature system configuration or speed up the actions performed by the integrated circuit.
 
+#### Our opinion 
+
+The only difficult part was to re-run part2 because some tests of the part 2 were executed on mac which uses different names on results. In general we think it was an easy part of project.
+
 #### Bibliography
 
 https://www.gatevidyalay.com/cache-line-cache-line-size-cache-memory/
