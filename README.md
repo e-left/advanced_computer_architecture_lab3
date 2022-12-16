@@ -372,3 +372,16 @@ Reminder that these runs and their respective specs can be found on the report f
 As always, with software simulations there is a degree of error because it is not possible to simulate the system in question 100% accurately. Furthermore, the systems in which this research is conducted are not optimized for simulations. Plus, we use two different programs to conduct our research, which have not been developed with the intention of being used together, thus having possible differences in their code and the way they handle things/results. 
 
 An example of something that cannot be simulated properly is the effect of the generated heat from a CPU, how it can cause thermal throttling depending on the cooling/temperature system configuration or speed up the actions performed by the integrated circuit.
+
+#### Bibliography
+
+https://www.gatevidyalay.com/cache-line-cache-line-size-cache-memory/
+
+http://ece-research.unm.edu/jimp/611/slides/chap5_4.html
+
+Computer Architecture John L. Hennesy and A. Patterson, 4th edition
+
+Digital Intergrated Circuits, 2nd edition
+
+
+
