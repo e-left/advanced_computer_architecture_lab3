@@ -216,7 +216,7 @@ The total product we wish to calculate is the EDAP (Energy-Delay-Area-Product) a
 `EDAP = Energy * Delay * Area`
 
 where:
-- `Energy` is the total energy for that configuration, equal to Core:Subthreshold Leakage + Core:Gate Leakage Core:Runtime Dynamic + L2:Subthreshold Leakage + L2:Gate Leakage L2:Runtime Dynamic
+- `Energy` is the total energy for that configuration, equal to (Core:Subthreshold Leakage + Core:Gate Leakage Core:Runtime Dynamic + L2:Subthreshold Leakage + L2:Gate Leakage L2:Runtime Dynamic) *time
 - `Area` is the total area, equal to Core:Area and L2:Area
 - `Delay` is the program execution time, obtained from the `gem5` runs (`stats.txt`, `sim_seconds`)
 
