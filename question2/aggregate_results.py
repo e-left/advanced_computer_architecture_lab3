@@ -101,8 +101,8 @@ for b in benchmarks:
     analyzed_results["peak_power"][b] = []
     analyzed_results["edap"][b] = []
     for run in runs:
-        energy = final_results[b][f"run{run}"]["cpu"]["subthreshold"] + final_results[b][f"run{run}"]["cpu"]["gate"] + final_results[b][f"run{run}"]["cpu"]["runtime"] + \
-            final_results[b][f"run{run}"]["l2"]["subthreshold"] + final_results[b][f"run{run}"]["l2"]["gate"] + final_results[b][f"run{run}"]["l2"]["runtime"]
+        energy = (final_results[b][f"run{run}"]["cpu"]["subthreshold"] + final_results[b][f"run{run}"]["cpu"]["gate"] + final_results[b][f"run{run}"]["cpu"]["runtime"] + \
+            final_results[b][f"run{run}"]["l2"]["subthreshold"] + final_results[b][f"run{run}"]["l2"]["gate"] + final_results[b][f"run{run}"]["l2"]["runtime"]) * final_results[b][f"run{run}"]["seconds"]["seconds"]
         peak_power = final_results[b][f"run{run}"]["total"]["peak_power"]
         product = energy * final_results[b][f"run{run}"]["seconds"]["seconds"] * (final_results[b][f"run{run}"]["cpu"]["area"] + final_results[b][f"run{run}"]["l2"]["area"])
 
@@ -117,7 +117,7 @@ for b in benchmarks:
     plt.bar(range(1, 11), analyzed_results["energy"][b])
     plt.xticks(range(1, 11))
     plt.xlabel("Run #")
-    plt.ylabel("Energy consumption (W)")
+    plt.ylabel("Energy consumption (Joules)")
     plt.title(f"Energy consumption for benchmark {b} per run")
     plt.savefig(f"figs/energy_{b}.png")
 
