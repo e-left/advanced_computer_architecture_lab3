@@ -264,6 +264,78 @@ where:
 
 ![plot](question2/figs/peak_power_specsjeng.png)
 
+Tables for the plots provided above are the following:
+
+Benchmark: specbzip
+| Run # | Energy Consumtion(J) | Peak Power(W) |
+| --- | --- | --- |
+| 1 | 0.30285458610495003 | 9.27139 |
+| 2 | 0.218996852585832 | 2.82349 |
+| 3 | 0.220595439833725 | 2.81092 |
+| 4 | 0.4015489756584 | 11.2387 |
+| 5 | 0.39965751907450997 | 11.2773 |
+| 6 | 0.40011697230959997 | 11.2481 |
+| 7 | 0.39757625617830006 | 11.3389 |
+| 8 | 0.3172382513115199 | 5.59558 |
+| 9 | 0.3171147204564 | 5.59718 |
+| 10 | 0.3924253123746 | 11.2832 |
+
+Benchmark: spechmmer
+| Run # | Energy Consumtion(J) | Peak Power(W) |
+| --- | --- | --- |
+| 1 | 0.22345305542482002 | 9.27139 |
+| 2 | 0.15688263617298998 | 2.82349 |
+| 3 | 0.159383369234269 | 2.81092 |
+| 4 | 0.3082506761122 | 11.2387 |
+| 5 | 0.30667627008809 | 11.2773 |
+| 6 | 0.30701635776518 | 11.2481 |
+| 7 | 0.30817478659930003 | 11.3389 |
+| 8 | 0.24682346641238395 | 5.59558 |
+| 9 | 0.246834497926235 | 5.59718 |
+| 10 | 0.30596914763137006 | 11.2832 |
+
+Benchmark: speclibm
+| Run # | Energy Consumtion(J) | Peak Power(W) |
+| --- | --- | --- |
+| 1 | 0.34353211971923003 | 9.27139 |
+| 2 | 0.46048822207422396 | 2.82349 |
+| 3 | 0.46610032326365197 | 2.81092 |
+| 4 | 0.4628610209695999 | 11.2387 |
+| 5 | 0.46048824072152006 | 11.2773 |
+| 6 | 0.46106906893649996 | 11.2481 |
+| 7 | 0.46389779251200003 | 11.3389 |
+| 8 | 0.4897978746093499 | 5.59558 |
+| 9 | 0.4898813438573 | 5.59718 |
+| 10 | 0.46055267349504003 | 11.2832 |
+
+Benchmark: specmcf
+| Run # | Energy Consumtion(J) | Peak Power(W) |
+| --- | --- | --- |
+| 1 | 0.20010851446812 | 9.27139 |
+| 2 | 0.14856534818794898 | 2.82349 |
+| 3 | 0.152333457223221 | 2.81092 |
+| 4 | 0.27544601332097995 | 11.2387 |
+| 5 | 0.27412063519635 | 11.2773 |
+| 6 | 0.27428253249621 | 11.2481 |
+| 7 | 0.27799153495605 | 11.3389 |
+| 8 | 0.23167027379423996 | 5.59558 |
+| 9 | 0.23168100567945601 | 5.59718 |
+| 10 | 0.2748777265624 | 11.2832 |
+
+Benchmark: specsjeng
+| Run # | Energy Consumtion(J) | Peak Power(W) |
+| --- | --- | --- |
+| 1 | 0.81260085796977 | 9.27139 |
+| 2 | 1.33620154607268 | 2.82349 |
+| 3 | 1.3494040654503918 | 2.81092 |
+| 4 | 1.0748223102357 | 11.2387 |
+| 5 | 1.0688679640115097 | 11.2773 |
+| 6 | 1.0589635000854 | 11.2481 |
+| 7 | 1.0755156718830001 | 11.3389 |
+| 8 | 1.2513822278959998 | 5.59558 |
+| 9 | 1.2515938090314997 | 5.59718 |
+| 10 | 1.06034462982528 | 11.2832 |
+
 #### Subquestion 3
 If we could combine different elements from architectures to create the ideal CPU Architecture, we would need a criterion to decide on which one is the best. We can use two metrics we have already created in this and in the previous lab: the EDAP and our custom Cost CPI function from lab 2. The Cost function showed that the configuration in run 1 is the best. By comparing the EDAP values for every run for every benchmark, we can determine the optimal architecture. By looking at the tables below:
 
@@ -338,6 +410,9 @@ Benchmark: specsjeng
 | 10 | 36.3965414876787 |
 
 we can conclude that the best configuration is that of run 2. Of course, there are many more possible criteria that can influence our choice (the cost or energy consumption might not be as important as the need for high performance)
+
+So we will chose the MinorCPU architecture with the configuration mentioned.
+
 Reminder that these runs and their respective specs can be found on the report from the previous lab and are not presented in this report.
 
 #### Possible faults in the procedure

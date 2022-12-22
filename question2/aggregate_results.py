@@ -136,7 +136,13 @@ for b in benchmarks:
     print("| --- | --- |")
     for run in range(10):
         print(f"| {run + 1} | {analyzed_results['edap'][b][run]} |") 
-        print("| --- | --- |")
+
+for b in benchmarks:
+    print(f"Benchmark: {b}")
+    print("| Run # | Energy Consumtion(J) | Peak Power(W) |")
+    print("| --- | --- | --- |")
+    for run in range(10):
+        print(f"| {run + 1} | {analyzed_results['energy'][b][run]} | {analyzed_results['peak_power'][b][run]} |") 
 
 for b in benchmarks:
     print(f'![plot](question2/figs/energy_{b}.png)')
